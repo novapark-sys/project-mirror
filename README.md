@@ -32,5 +32,5 @@
 
 ### 1. 레포지토리 클론 및 이동
 ```bash
-git clone [https://github.com/your-repo/project-mirror.git](https://github.com/your-repo/project-mirror.git)
+git clone [https://github.com/novapark-sys/project-mirror.git](https://github.com/project-mirror.git)
 cd project-mirror
