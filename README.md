@@ -2,7 +2,7 @@
 
 **Project Mirror**는 과거 설문 데이터를 기반으로 실존 인물을 모사하는 **'합성 패널(Synthetic Panel)'** 시뮬레이션 엔진입니다.
 
-스탠퍼드 대학교의 *Generative Agents (2023)* 논문에서 제안한 기억 인출 알고리즘(Retrieval Function)과 성찰(Reflection) 메커니즘을 비즈니스 환경에 맞춰 최적화하였습니다.
+스탠퍼드 대학교의 [*Generative Agents (2023)*](https://arxiv.org/abs/2304.03442) 논문에서 제안한 기억 인출 알고리즘(Retrieval Function)과 성찰(Reflection) 메커니즘을 비즈니스 환경에 맞춰 최적화하였습니다.
 
 ---
 
