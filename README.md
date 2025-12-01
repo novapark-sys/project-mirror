@@ -10,7 +10,9 @@
 
 ### 1. Dual-Layer Brain Architecture 
 * **Layer 1. Core Persona (장기 기억/성찰):** 전체 데이터를 관조(Reflection)하여 추출한 불변의 가치관과 성격을 요약합니다.
-* **Layer 2. Retrieval Memory (단기 기억/증거):** 질문과 관련된 구체적인 과거 행동을 '기억 Scoring System'을 기반으로 찾아냅니다. 
+  * '성찰'에서는 최대한 모든 데이터를 훑는 것이 개인의 특성을 파악하기에 효과적일거라 판단. 하지만 비용, 읽는 속도의 이슈가 있어, 과거부터 현재까지를 특정 chunk_size로 띄엄띄엄 scan하도록 함.
+* **Layer 2. Retrieval Memory (단기 기억/증거):** 질문과 관련된 구체적인 과거 행동을 '기억 Scoring System'을 기반으로 찾아냅니다.
+  * 질문과 관련된 기억을 모든 데이터를 키워드 검색으로 일부 추출하고, 선별된 후보군에 대해서 최신성 / 중요도 / 적합성 을 기준으로 score를 매기고, 높은 Score를 가진 top 10개의 메모리를 가져온다.
 
 ### 2. 기억 Scoring System 
 논문의 수식을 그대로 구현하여 가장 적합한 기억을 선별합니다.
@@ -18,10 +20,7 @@
 * **Importance ($I$):** LLM이 판단한 기억의 중요도 (1~10점).
 * **Relevance ($R$):** 질문과 기억 간의 임베딩 벡터 코사인 유사도.
 
-### 3. Full-Scan Hybrid Search
-* 데이터 개수 제한 없이 **전체 데이터(Full-Scan)**를 대상으로 키워드 검색을 수행한 뒤, 선별된 후보군에 대해서만 정밀 스코어링을 수행합니다.
-
-### 4. Explainable AI (Brain Map Visualization)
+### 3. Explainable AI (Knowledge Graph)
 * AI가 왜 그런 답변을 했는지, 어떤 기억을 참조했는지 지식 그래프(Knowledge Graph) 형태로 시각화하여 보여줍니다.
 
 ---
